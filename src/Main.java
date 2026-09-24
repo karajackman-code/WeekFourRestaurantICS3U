@@ -27,20 +27,27 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		System.out.println("Welcome to");
+		System.out.println("Welcome to Kara's Gluten-Free Bakery!");
 		System.out.println("Would you like a drink to start?");
 		String drinkyn = in.nextLine();
 		String drink="";
+		int drinkqty = 0;
+		String receipt ="";
+		double drinkprice = 0;
 		if (drinkyn.startsWith("n")||drinkyn.startsWith("N")) {
-				System.out.println("Sounds good, what would you like to eat?");
+
 		} else {
-				System.out.println("Perfect! You can choose from the options below, just type in what drink you want, and how many (item in first line, quantity in next)");
+				System.out.println("Perfect! You can choose from the options below, just type in what drink you want, and how many");
 				System.out.println("Water-$1.00");
 				System.out.println("Soda-$2.50");
 				System.out.println("Milk-$1.50");
 				System.out.println("Coffee-$3.00");
 				System.out.println("Lemonade-$2.00");
+				System.out.println("DRINK:");
 				String drinkitem = in.nextLine();
+				System.out.println("QUANTITY:");
+				drinkqty = in.nextInt();
+				
 				//milk and soda options
 				if (drinkitem.equalsIgnoreCase("Soda")) {
 				System.out.println("What type of Soda would you like? We have,");
@@ -83,23 +90,215 @@ public class Main {
 				}
 				//prices
 				if (drinkitem.equalsIgnoreCase("Water")) {
-					double drinkprice = (1.00);
+					drinkprice = (1.00);
 					drink = ("Water");
 				}
 				if (drinkitem.equalsIgnoreCase("Soda")) {
-					double drinkprice = (2.50);
+					 drinkprice = (2.50);
 				}
 				if (drinkitem.equalsIgnoreCase("Coffee")) {
-					double drinkprice = (3.00);
+					 drinkprice = (3.00);
 					drink = ("Coffee");
 				}
 				if (drinkitem.equalsIgnoreCase("Lemonade")) {
-					double drinkprice = (2.00);
+					 drinkprice = (2.00);
 					drink = ("Lemonade");
 				}
 				if (drinkitem.equalsIgnoreCase("Milk")) {
-					double drinkprice = (1.50);
+					 drinkprice = (1.50);
 				}
+		}
+		//Food time
+		System.out.println("Sounds good! Can I get you something to eat?");
+		String foodyn = in.nextLine();
+		String food="";
+		String flavour ="";
+		int foodqty=0;
+		double foodprice = 0;
+		double totalprice=0;
+		String discount="";
+		String filling ="";
+		if (foodyn.startsWith("n")||foodyn.startsWith("N")) {
+
+		} else {
+			System.out.println("Good choice! State below what you would like to eat, and how many");
+			System.out.println("Cake-$10.00");
+			System.out.println("Doughnut-$7.00");
+			System.out.println("Cake Pop-$4.50");
+			System.out.println("Cookie-$3.00");
+			System.out.println("Cupcake-$2.00");
+			System.out.println("Croissant-$4.00");
+			System.out.println("Cinnamon Roll-$2.50");
+			System.out.println("FOOD:");
+			food = in.nextLine();
+			System.out.println("QUANTITY:");
+			foodqty = in.nextInt();
+			//flavor for all
+			if (food.equalsIgnoreCase("Cake")) {
+				System.out.println("What type of Cake would you like? We have,");
+				System.out.println("Vanilla");
+				System.out.println("Chocolate");
+				System.out.println("Red Velvet");
+				System.out.println("Lemon");
+				System.out.println("Funfetti");
+				flavour = in.nextLine();
+				flavour = flavour.toLowerCase();
+				if (flavour.startsWith("c")) {
+					flavour="Chocolate";
+				}else if (flavour.startsWith("f")) {
+					flavour="Funfetti";
+				}else if (flavour.startsWith("v")) {
+					flavour="Vanilla";
+				}else if (flavour.startsWith("l")) {
+					flavour="Lemon";
+				}else if (flavour.startsWith("r")) {
+					flavour="Red Velvet";
+				}else {
+					System.out.println("Sorry thats not available, no Cake for you");
+				}}
+			if (food.equalsIgnoreCase("Cake Pop")) {
+				System.out.println("What type of Cake Pop would you like? We have,");
+				System.out.println("Vanilla");
+				System.out.println("Chocolate");
+				System.out.println("Red Velvet");
+				System.out.println("Lemon");
+				System.out.println("Funfetti");
+				flavour = in.nextLine();
+				flavour = flavour.toLowerCase();
+				if (flavour.startsWith("c")) {
+					flavour="Chocolate";
+				}else if (flavour.startsWith("f")) {
+					flavour="Funfetti";
+				}else if (flavour.startsWith("v")) {
+					flavour="Vanilla";
+				}else if (flavour.startsWith("l")) {
+					flavour="Lemon";
+				}else if (flavour.startsWith("r")) {
+					flavour="Red Velvet";
+				}else {
+					System.out.println("Sorry thats not available, no Cake Pop for you");
+				}}
+			if (food.equalsIgnoreCase("Cupcake")) {
+				System.out.println("What type of Cupcake would you like? We have,");
+				System.out.println("Vanilla");
+				System.out.println("Chocolate");
+				System.out.println("Red Velvet");
+				System.out.println("Lemon");
+				System.out.println("Funfetti");
+				flavour = in.nextLine();
+				flavour = flavour.toLowerCase();
+				if (flavour.startsWith("c")) {
+					flavour="Chocolate";
+				}else if (flavour.startsWith("f")) {
+					flavour="Funfetti";
+				}else if (flavour.startsWith("v")) {
+					flavour="Vanilla";
+				}else if (flavour.startsWith("l")) {
+					flavour="Lemon";
+				}else if (flavour.startsWith("r")) {
+					flavour="Red Velvet";
+				}else {
+					System.out.println("Sorry thats not available, no Cupcake for you");
+				}}
+			if (food.equalsIgnoreCase("Doughnut")) {
+				System.out.println("What type of Doughnut would you like? We have,");
+				System.out.println("Regular Glazed");
+				System.out.println("Chocolate Glazed");
+				System.out.println("Boston Cream");
+				System.out.println("Jelly-Filled");
+				flavour = in.nextLine();
+				flavour = flavour.toLowerCase();
+				if (flavour.startsWith("r")) {
+					flavour="Regular Glazed";
+				}else if (flavour.startsWith("c")) {
+					flavour="Chocolate Glazed";
+				}else if (flavour.startsWith("b")) {
+					flavour="Boston Cream";
+				}else if (flavour.startsWith("j")) {
+					flavour="Jelly-Filled";
+				}else {
+					System.out.println("Sorry thats not available, no Doughnut for you");
+				}}
+			if (food.equalsIgnoreCase("Cookie")) {
+				System.out.println("What type of Cookie would you like? We have,");
+				System.out.println("Chocolate Chip");
+				System.out.println("Peanut Butter");
+				System.out.println("Oatmeal Raisin");	
+				System.out.println("Snickerdoodle");
+				flavour = in.nextLine();
+				flavour = flavour.toLowerCase();
+				if (flavour.startsWith("c")) {
+					flavour="Chocolate Chip";
+				}else if (flavour.startsWith("p")) {
+					flavour="Peanut Butter";
+				}else if (flavour.startsWith("o")) {
+					flavour="Oatmeal Rasin";
+				}else if (flavour.startsWith("s")) {
+					flavour="Snickerdoodle";
+				}else {
+					System.out.println("Sorry thats not available, no Cookies for you");
+				}}
+			//croissant filling
+			if (food.equalsIgnoreCase("Croissant")) {
+				System.out.println("What type of filling would you like? We have,");
+				System.out.println("Chocolate");
+				System.out.println("Almond");
+				System.out.println("Cream and Fruit");
+				System.out.println("Jam");
+				filling = in.nextLine();
+				filling = filling.toLowerCase();
+				if (filling.startsWith("c")) {
+					filling="Chocolate filled";
+				}else if (filling.startsWith("A")) {
+					filling="Almond Spread filled";
+				}else if (filling.startsWith("c")) {
+					filling="Cream and Fruit filled";
+				}else if (filling.startsWith("J")) {
+					filling="Jam filled";
+				}else {
+					System.out.println("Sorry thats not available, no filling for you");
+				}}
+			//prices
+			if (food.equalsIgnoreCase("Cake")) {
+				foodprice = (10.00);
+				food = ("Cake");
+			}
+			if (food.equalsIgnoreCase("Doughnut")) {
+				foodprice = (7.00);
+				food=("Doughnut");
+			}
+			if (food.equalsIgnoreCase("Cake Pop")) {
+				foodprice = (4.50);
+				food = ("Cake Pop");
+			}
+			if (food.equalsIgnoreCase("Cookie")) {
+				foodprice = (3.00);
+				food = ("Cookie");
+			}
+			if (food.equalsIgnoreCase("Cupcake")) {
+				foodprice = (2.00);
+				food = ("Cupcake");
+			}
+			if (food.equalsIgnoreCase("Croissant")) {
+				foodprice = (4.00);
+				food = ("Croissant");
+			}
+			if (food.equalsIgnoreCase("Cinnamon Roll")) {
+				foodprice = (2.50);
+				food = ("Cinnamon Roll");
+			}
+			//math!! receipt
+			double price = (foodprice+drinkprice);
+			if (price>=30) {
+				totalprice=price*0.9;
+				 discount = ("10% Discount");
+			}else if (price>=50) {
+				totalprice=price*0.8;
+				
+				 discount=("20% Discount");
+			}
+			receipt =  (drink+" for "+drinkprice+", "+food+" for "+foodprice);
+			System.out.println(receipt);
 		}
 	}
 }
