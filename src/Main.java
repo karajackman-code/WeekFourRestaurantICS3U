@@ -32,7 +32,8 @@ public class Main {
 		String drinkyn = in.nextLine();
 		String drink="";
 		int drinkqty = 0;
-		String receipt ="";
+		String receipt1 ="";
+		String receipt2="";
 		double drinkprice = 0;
 		if (drinkyn.startsWith("n")||drinkyn.startsWith("N")) {
 
@@ -115,7 +116,7 @@ public class Main {
 		String flavour ="";
 		int foodqty=0;
 		double foodprice = 0;
-		double totalprice=0;
+		double price1=0;
 		String discount="";
 		String filling ="";
 		if (foodyn.startsWith("n")||foodyn.startsWith("N")) {
@@ -144,15 +145,15 @@ public class Main {
 				flavour = in.nextLine();
 				flavour = flavour.toLowerCase();
 				if (flavour.startsWith("c")) {
-					flavour="Chocolate";
+					flavour=" Chocolate ";
 				}else if (flavour.startsWith("f")) {
-					flavour="Funfetti";
+					flavour=" Funfetti ";
 				}else if (flavour.startsWith("v")) {
-					flavour="Vanilla";
+					flavour=" Vanilla ";
 				}else if (flavour.startsWith("l")) {
-					flavour="Lemon";
+					flavour=" Lemon ";
 				}else if (flavour.startsWith("r")) {
-					flavour="Red Velvet";
+					flavour=" Red Velvet ";
 				}else {
 					System.out.println("Sorry thats not available, no Cake for you");
 				}}
@@ -166,15 +167,15 @@ public class Main {
 				flavour = in.nextLine();
 				flavour = flavour.toLowerCase();
 				if (flavour.startsWith("c")) {
-					flavour="Chocolate";
+					flavour=" Chocolate ";
 				}else if (flavour.startsWith("f")) {
-					flavour="Funfetti";
+					flavour=" Funfetti ";
 				}else if (flavour.startsWith("v")) {
-					flavour="Vanilla";
+					flavour=" Vanilla ";
 				}else if (flavour.startsWith("l")) {
-					flavour="Lemon";
+					flavour=" Lemon ";
 				}else if (flavour.startsWith("r")) {
-					flavour="Red Velvet";
+					flavour=" Red Velvet ";
 				}else {
 					System.out.println("Sorry thats not available, no Cake Pop for you");
 				}}
@@ -188,15 +189,15 @@ public class Main {
 				flavour = in.nextLine();
 				flavour = flavour.toLowerCase();
 				if (flavour.startsWith("c")) {
-					flavour="Chocolate";
+					flavour=" Chocolate ";
 				}else if (flavour.startsWith("f")) {
-					flavour="Funfetti";
+					flavour=" Funfetti ";
 				}else if (flavour.startsWith("v")) {
-					flavour="Vanilla";
+					flavour=" Vanilla ";
 				}else if (flavour.startsWith("l")) {
-					flavour="Lemon";
+					flavour=" Lemon ";
 				}else if (flavour.startsWith("r")) {
-					flavour="Red Velvet";
+					flavour=" Red Velvet ";
 				}else {
 					System.out.println("Sorry thats not available, no Cupcake for you");
 				}}
@@ -209,13 +210,13 @@ public class Main {
 				flavour = in.nextLine();
 				flavour = flavour.toLowerCase();
 				if (flavour.startsWith("r")) {
-					flavour="Regular Glazed";
+					flavour=" Regular Glazed ";
 				}else if (flavour.startsWith("c")) {
-					flavour="Chocolate Glazed";
+					flavour=" Chocolate Glazed ";
 				}else if (flavour.startsWith("b")) {
-					flavour="Boston Cream";
+					flavour=" Boston Cream ";
 				}else if (flavour.startsWith("j")) {
-					flavour="Jelly-Filled";
+					flavour=" Jelly-Filled ";
 				}else {
 					System.out.println("Sorry thats not available, no Doughnut for you");
 				}}
@@ -228,13 +229,13 @@ public class Main {
 				flavour = in.nextLine();
 				flavour = flavour.toLowerCase();
 				if (flavour.startsWith("c")) {
-					flavour="Chocolate Chip";
+					flavour=" Chocolate Chip ";
 				}else if (flavour.startsWith("p")) {
-					flavour="Peanut Butter";
+					flavour=" Peanut Butter ";
 				}else if (flavour.startsWith("o")) {
-					flavour="Oatmeal Rasin";
+					flavour=" Oatmeal Rasin ";
 				}else if (flavour.startsWith("s")) {
-					flavour="Snickerdoodle";
+					flavour=" Snickerdoodle ";
 				}else {
 					System.out.println("Sorry thats not available, no Cookies for you");
 				}}
@@ -248,57 +249,63 @@ public class Main {
 				filling = in.nextLine();
 				filling = filling.toLowerCase();
 				if (filling.startsWith("c")) {
-					filling="Chocolate filled";
+					filling=" Chocolate filled ";
 				}else if (filling.startsWith("A")) {
-					filling="Almond Spread filled";
+					filling=" Almond Spread filled ";
 				}else if (filling.startsWith("c")) {
-					filling="Cream and Fruit filled";
+					filling=" Cream and Fruit filled ";
 				}else if (filling.startsWith("J")) {
-					filling="Jam filled";
+					filling=" Jam filled ";
 				}else {
 					System.out.println("Sorry thats not available, no filling for you");
 				}}
 			//prices
 			if (food.equalsIgnoreCase("Cake")) {
 				foodprice = (10.00);
-				food = ("Cake");
+				food = (" Cake");
 			}
 			if (food.equalsIgnoreCase("Doughnut")) {
 				foodprice = (7.00);
-				food=("Doughnut");
+				food=(" Doughnut");
 			}
 			if (food.equalsIgnoreCase("Cake Pop")) {
 				foodprice = (4.50);
-				food = ("Cake Pop");
+				food = (" Cake Pop");
 			}
 			if (food.equalsIgnoreCase("Cookie")) {
 				foodprice = (3.00);
-				food = ("Cookie");
+				food = (" Cookie");
 			}
 			if (food.equalsIgnoreCase("Cupcake")) {
 				foodprice = (2.00);
-				food = ("Cupcake");
+				food = (" Cupcake");
 			}
 			if (food.equalsIgnoreCase("Croissant")) {
 				foodprice = (4.00);
-				food = ("Croissant");
+				food = (" Croissant");
 			}
 			if (food.equalsIgnoreCase("Cinnamon Roll")) {
 				foodprice = (2.50);
-				food = ("Cinnamon Roll");
+				food = (" Cinnamon Roll");
 			}
 			//math!! receipt
-			double price = (foodprice+drinkprice);
+			double price3=0;
+			double price = (foodprice+drinkprice*drinkqty*foodqty);
 			if (price>=30) {
-				totalprice=price*0.9;
+				price1=price*0.9;
 				 discount = ("10% Discount");
+				 price3 = (price1-price);
 			}else if (price>=50) {
-				totalprice=price*0.8;
-				
+				price1=price*0.8;
 				 discount=("20% Discount");
+				 price3 = (price1-price);
 			}
-			receipt =  (drink+" for "+drinkprice+", "+food+" for "+foodprice);
-			System.out.println(receipt);
+			double totalprice = (price1*1.13);
+			double tax =  (totalprice-price1);
+			receipt1 =  (drinkqty+" "+drink+" for $"+drinkprice+", "+foodqty+flavour+filling+food+" for $"+foodprice );
+			receipt2 = ("Subtotal: $"+price+" "+discount+": -$"+price3+" Tax: $"+tax+" Total: $"+totalprice);
+			System.out.println(receipt1);
+			System.out.println(receipt2);
 		}
 	}
 }
