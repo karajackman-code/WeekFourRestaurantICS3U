@@ -126,11 +126,17 @@ public class Main {
 				if (price >= 30) {
 					price1 = price * 0.9;
 					price3 = (price - price1);
+					price3 *= 100;
+					price3= Math.round(price3);
+					price3 /=100;
 					discount = ("10% Discount of $"+price3+" off");
 					
 				} else if (price >= 50) {
 					price1 = price * 0.8;
 					price3 = (price - price1);
+					price3 *= 100;
+					price3= Math.round(price3);
+					price3 /=100;
 					discount = ("20% Discount of $"+price3+" off");
 					
 				}else {
@@ -167,7 +173,7 @@ public class Main {
 					System.out.println("You still owe me $"+owe+". Type in the bill youre going to give me to cover that");
 					double bill2 = in.nextDouble();
 					if (bill2>owe) {
-						double change2 = owe-bill2;
+						double change2 =  bill2-owe;
 						change2 *= 100;
 						change2= Math.round(change2);
 						change2 /=100;
@@ -359,10 +365,16 @@ public class Main {
 			if (price >= 30) {
 				price1 = price * 0.9;
 				price3 = (price - price1);
+				price3 *= 100;
+				price3= Math.round(price3);
+				price3 /=100;
 				discount = ("10% Discount of $"+price3+" off");
 			} else if (price >= 50) {
 				price1 = price * 0.8;
 				price3 = (price - price1);
+				price3 *= 100;
+				price3= Math.round(price3);
+				price3 /=100;
 				discount = ("20% Discount of $"+price3+" off");
 
 			}else {
@@ -400,7 +412,7 @@ public class Main {
 				System.out.println("You still owe me $"+owe+". Type in the bill youre going to give me to cover that");
 				double bill2 = in.nextDouble();
 				if (bill2>owe) {
-					double change2 = owe-bill2;
+					double change2 = bill2-owe;
 					change2 *= 100;
 					change2= Math.round(change2);
 					change2 /=100;
