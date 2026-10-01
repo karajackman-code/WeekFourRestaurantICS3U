@@ -314,17 +314,17 @@ public class Main {
 				System.out.println("What type of filling would you like? We have,");
 				System.out.println("Chocolate");
 				System.out.println("Almond");
-				System.out.println("Cream and Fruit");
+				System.out.println("Fruit and Cream");
 				System.out.println("Jam");
 				filling = in.nextLine();
 				filling = filling.toLowerCase();
 				if (filling.startsWith("c")) {
 					filling = "Chocolate filled ";
-				} else if (filling.startsWith("A")) {
+				} else if (filling.startsWith("a")) {
 					filling = "Almond Spread filled ";
-				} else if (filling.startsWith("c")) {
-					filling = "Cream and Fruit filled ";
-				} else if (filling.startsWith("J")) {
+				} else if (filling.startsWith("f")) {
+					filling = "Fruit and Cream filled ";
+				} else if (filling.startsWith("j")) {
 					filling = "Jam filled ";
 				} else {
 					System.out.println("Sorry thats not available, no filling for you");
